@@ -1,0 +1,25 @@
+.header_page {
+    display: flex;
+    justify-content: space-between;
+    
+}
+.logo{
+    width: 6rem;
+    height: 1.5rem;
+}
+.navlink{
+    display: flex;
+}
+.link{
+    margin-right: 1rem;
+}
+.ourbutton{
+    color: white;
+    background-color: blue;
+    border-radius: 0.3rem;
+    padding: 8px 30px;
+}
+.bitcoin{
+    font-size: 1.5rem;
+    font-weight: 600;
+}
