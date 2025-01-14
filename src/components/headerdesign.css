@@ -1,6 +1,8 @@
 .header_page {
+    background-color: white;
     display: flex;
     justify-content: space-between;
+    margin: 7px 0%;
     
 }
 .logo{
@@ -20,6 +22,35 @@
     padding: 8px 30px;
 }
 .bitcoin{
-    font-size: 1.5rem;
+    font-size: 1.6rem;
     font-weight: 600;
 }
+.bitcoin_header{
+    font-size: 1.2rem;
+    font-weight: 600;
+    line-height: 250%;
+}
+.bitcoin_description{
+    font-weight: 500;
+    line-height: inherit;
+}
+.bitcoin_box{
+    background-color: white;
+}
+
+
+/* ------------------ */
+.container {
+    width: 80%;
+    margin: 0px;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    font-size:1rem;
+  }
+  .showw{
+    display: flex;
+    gap: 20px;
+  }
+  .coin_image{
+    width: 35px;
+  }
