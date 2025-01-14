@@ -6,7 +6,7 @@ const Header = () => {
     return (
         <>
         <div className='header_page'>
-            <div className=''>
+            <div>
                 <img src={logo} alt="" className='logo'/>
             </div>
             <div className='navlink'>
@@ -18,33 +18,6 @@ const Header = () => {
                 </div>
             </div>
         </div>
-
-
-
-
-
-
-
-
-
-{/* 
-            <frame className="header">
-                <frame className="logodesign">
-                    <div className='logoimage'>
-                    <img src={logo} alt="" className='image' />
-                    </div>
-                </frame>
-                <frame className='navbar'>
-                    <frame className="navlink">
-                        
-                    </frame>
-                    <frame className="getstartedframe">
-                            <frame className="getstartedbutton">
-                                <button className="getstarted">GetStarted</button>
-                            </frame>
-                    </frame>     
-                </frame>
-            </frame>  */}
         </>
     )
 }
