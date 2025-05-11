@@ -1,25 +1,20 @@
 import React from 'react';
-import logo from "../assets/logo.svg";
-import '../components/headerdesign.css';
+import './Header.css';
 
 const Header = () => {
-    return (
-        <>
-        <div className='header_page'>
-            <div>
-                <img src={logo} alt="" className='logo'/>
-            </div>
-            <div className='navlink'>
-                <div className='link'>Crypto Taxes</div>
-                <div className='link'>Free Tools</div>
-                <div className='link'>Resource Center</div>
-                <div >
-                    <button className='ourbutton'>Get Started</button>
-                </div>
-            </div>
-        </div>
-        </>
-    )
-}
+  return (
+    <header className="crypto-header">
+      <div className="logo">Crypto<span>Recommend</span></div>
+      <nav>
+        <ul className="nav-links">
+          <li><a href="#recommendations">Recommendations</a></li>
+          <li><a href="#market">Market</a></li>
+          <li><a href="#news">News</a></li>
+          <li><a href="#about">About</a></li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

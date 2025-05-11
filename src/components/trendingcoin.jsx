@@ -1,61 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import '../components/headerdesign.css';
+import React, { useEffect, useState } from 'react';
+import './headerdesign.css';
 
-const Trendingcoin = () => {
-  const [trendingCryptos, setTrendingCryptos] = useState([]);
+function CoinList() {
+  const [coins, setCoins] = useState([]);
   const [loading, setLoading] = useState(true);
-  const [error, setError] = useState(null);
 
   useEffect(() => {
-    // Fetch data from the CoinGecko API
     fetch('https://api.coingecko.com/api/v3/search/trending')
-      .then((response) => {
-        if (!response.ok) {
-          throw new Error('Failed to fetch data');
-        }
-        return response.json();
-      })
-      .then((data) => {
-        setTrendingCryptos(data.coins);
+      .then(res => res.json())
+      .then(data => {
+        setCoins(data.coins);
         setLoading(false);
       })
-      .catch((err) => {
-        setError(err.message);
+      .catch(err => {
+        console.error('Error fetching trending coins:', err);
         setLoading(false);
       });
   }, []);
 
-  // Render loading state, error state, or the list of trending cryptocurrencies
   if (loading) {
-    return <div>Loading...</div>;
-  }
-
-  if (error) {
-    return <div>Error: {error}</div>;
+    return <p>Loading...</p>;
   }
 
   return (
-    <div className='container'>
-      <p>Trending Cryptocurrencies</p>
-      <ul style={{daisplay:'flex'}}>
-        <div className='showw'>
-        {trendingCryptos.map((crypto) => (
-          <div>
-          <li key={crypto.item.id}>
-            <img
-              src={crypto.item.thumb}
-              alt={crypto.item.name}
-            />
-    <h6>{crypto.item.name}</h6> 
-            <p>{crypto.item.symbol}</p>
-          </li>
+    <>
+    <div className='trending_coin_heading'>Trending Coins</div>
+    <div className="coin-list">
+      {coins.map((coinObj, index) => {
+        const coin = coinObj.item;
+        return (
+          <div className="coin-card" key={coin.id}>
+            <img src={coin.small} alt={coin.name} />
+            <h2>{coin.name}</h2>
+            <p>{coin.symbol.toUpperCase()}</p>
+            <a
+              href={`https://www.coingecko.com/en/coins/${coin.id}`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              View on CoinGecko
+            </a>
           </div>
-        ))}
-        </div>
-      </ul>
+        );
+      })}
     </div>
+    </>
   );
-};
+}
 
-export default Trendingcoin;
-
+export default CoinList;

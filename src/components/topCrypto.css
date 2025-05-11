@@ -1,0 +1,107 @@
+/* src/App.css */
+  
+  .app-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem 1rem;
+  }
+  
+  h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    background: linear-gradient(90deg, #00ffe0, #007bff);
+    margin-bottom: 1.5rem;
+  }
+  
+  .loading {
+    text-align: center;
+  }
+  
+  .table-wrapper {
+    overflow-x: auto;
+    border-radius: 12px;
+    background: #ebede8;
+    box-shadow: 0 0 20px rgba(0, 255, 255, 0.1);
+  }
+  
+  .crypto-table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 700px;
+  }
+  
+  thead {
+    border: 1px solid black;
+    width:fit-content;
+    display: inline;
+    position: sticky;
+    top: 0;
+  }
+  thead> tr> td {
+    background-color: #2c3e50;
+    color: white;
+    font-size: 1.1rem;
+    text-shadow: brown;
+  }
+  
+  th, td {
+    padding: 1rem;
+    text-align: left;
+    font-size: 0.95rem;
+  }
+  
+  tbody tr:hover {
+    background-color: #f50f0f;
+    transition: background 0.2s ease-in-out;
+  }
+  
+  .coin-cell {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+  
+  .coin-cell img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+  }
+  
+  .coin-name {
+    font-weight: 600;
+  }
+  
+  .coin-symbol {
+    font-size: 0.8rem;
+    color: #bbb;
+    text-transform: uppercase;
+  }
+  
+  .green {
+    color: #00e676;
+  }
+  
+  .red {
+    color: #ff5252;
+  }
+  
+  /* Responsive styles */
+  @media (max-width: 768px) {
+    .crypto-table {
+      font-size: 0.85rem;
+    }
+  
+    th, td {
+      padding: 0.7rem;
+    }
+  
+    .coin-cell img {
+      width: 24px;
+      height: 24px;
+    }
+  
+    h1 {
+      font-size: 2rem;
+    }
+  }
+  

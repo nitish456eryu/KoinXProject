@@ -1,26 +1,4 @@
-.header_page {
-    background-color: white;
-    display: flex;
-    justify-content: space-between;
-    margin: 7px 0%;
-    
-}
-.logo{
-    width: 6rem;
-    height: 1.5rem;
-}
-.navlink{
-    display: flex;
-}
-.link{
-    margin-right: 1rem;
-}
-.ourbutton{
-    color: white;
-    background-color: blue;
-    border-radius: 0.3rem;
-    padding: 8px 30px;
-}
+
 .bitcoin{
     font-size: 1.6rem;
     font-weight: 600;
@@ -36,21 +14,127 @@
 }
 .bitcoin_box{
     background-color: white;
+    padding: 0.3rem 0.4rem;
 }
 
 
 /* ------------------ */
 .container {
-    width: 80%;
     margin: 0px;
-    padding: 20px;
+    padding:0%;
     font-family: Arial, sans-serif;
     font-size:1rem;
   }
-  .showw{
-    display: flex;
-    gap: 20px;
+  .container p{
+    color: red;
+    font-size: 2rem;
+    background-color: rgb(27, 212, 27);
+    text-align: center;
   }
   .coin_image{
-    width: 35px;
+    width: 80%;
   }
+  table{
+    display: flex;
+    flex-direction: column;
+    border-collapse: collapse;
+    overflow-y: auto;
+  }
+
+
+  td{
+    border: 1px solid black;
+    background-color: aliceblue;
+    width: 130px;
+    text-align: center;
+
+  }
+  .Riskcontainer {
+    margin: 0px;
+    padding:0%;
+    font-family: Arial, sans-serif;
+    font-size:1rem;
+    margin-top: 10px;
+  }
+  .risk_crypto_box{
+    margin: auto;
+  }
+
+
+  /* ----------------- */
+
+  
+  .app-container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 2rem;
+    text-align: center;
+  }
+  
+  h1 {
+    color: #ff9900;
+  }
+  
+  .coin-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 1rem;
+    background: linear-gradient(rgb(248, 245, 245));
+  }
+  
+  .coin-card {
+    background: #fff;
+    border: 1px solid #eee;
+    border-radius: 10px;
+    padding: 1rem;
+    width: 200px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    transition: transform 0.2s;
+  }
+  
+  .coin-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .coin-card img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .coin-card h2 {
+    font-size: 1.2rem;
+    margin: 0.5rem 0;
+  }
+  
+  .coin-card p {
+    font-weight: bold;
+    color: #555;
+  }
+  
+  .coin-card a {
+    text-decoration: none;
+    color: #007bff;
+    font-size: 0.9rem;
+  }
+  
+  @media (max-width: 600px) {
+    .coin-card {
+      width: 100%;
+    }
+  }
+
+  .trending_coin_heading{
+    background: linear-gradient(90deg, #201f1fdf, #abd16ddf, #16b914, #007bff );
+    font-size: 2.5rem;
+    margin: 10px;
+    padding: 50px auto;
+    color: white;
+    text-align: center;
+  }
+  
+  
+
+
+  
